@@ -1,0 +1,21 @@
+.product-page {
+    margin: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details h1 {
+    margin-top: 0;
+}
+
+.h1-like {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
