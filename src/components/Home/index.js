@@ -43,7 +43,6 @@ const Home = () => {
   }
 
   useEffect(() => {
-    console.log('useEffect');
     fetchProductsData()
       .then((productsData) => {
         setAllProducts(productsData.data);
@@ -146,7 +145,7 @@ const Home = () => {
           return (
             <div className="product-card"
               key={index}
-              onClick={() => handleProductClick(item.id)}
+              onClick={() => handleProductClick(item._id)}
             >
               <img src={item.image} alt={item.title}></img>
               <p>{item.title}</p>

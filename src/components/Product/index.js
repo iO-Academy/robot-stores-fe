@@ -9,7 +9,6 @@ const Product = () => {
   const {id} = useParams();
 
   const fetchData = async () => {
-    console.log('fetchData()');
     const response = await fetch(`http://localhost:3001/products/${id}`);
 
     if (!response.ok) {
@@ -20,10 +19,8 @@ const Product = () => {
   }
 
   useEffect(() => {
-    console.log('useEffect()');
     fetchData()
       .then((productData) => {
-        console.table(productData.data);
         setProduct(productData.data);
       })
       .catch((e) => {
@@ -48,7 +45,7 @@ const Product = () => {
         <h2>
           {product.category && formatH2()}
         </h2>
-        <p>{product.description}</p>
+        <p>{product.shortbio}</p>
       </div>
     </div>
   );
